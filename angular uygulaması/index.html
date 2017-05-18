@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+ <html lang="en-US" xmlns:name="http://www.w3.org/1999/xhtml"/>
+ <head>
+  <link rel="stylesheet" type="text/css" href="anasayfa.css"/>
+  <link rel="stylesheet" type="text/css" href="anasayfa1.css"/>
+
+ <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+ <script src="https://ahsendb-6d26.restdb.io/rest/_jsapi.js"></script>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <a href="#forex">FOREX ile ne yapılır ??</a>
+ <a href="#hakkimizda">Hakkımızda</a>
+ <a href="#iletisim">İletişim</a>
+ <a href="#ödüllerimiz">Ödüllerimiz</a>
+ <a href="#Forex Avantajları">Forex Avantajları</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+ function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+ }
+
+ function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+ }
+</script>
+
+
+
+
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+console.log('test 1');
+app.config(function($routeProvider) {
+$routeProvider
+ .when("/", {
+ templateUrl : "main.html"
+ })
+ .when("/forex", {
+ templateUrl : "forex-ile-ne-yapılır.html"
+ })
+ .when("/iletisim", {
+ templateUrl : "iletisim.html"
+ })
+ .when("/hakkimizda", {
+ templateUrl : "hakkimizda-1.html"
+ })
+        .when("/forexavantajlari",{
+         templateUrl:"forex-avantajlari.html"
+                }
+        )
+});
+</script>
+<div ng-app="">
+
+ Ad: <input id="name" type="text" value="" style="background-color: aquamarine"><br>
+ şifre: <input id="password" type="password" style="background-color: burlywood"><br>
+ <input type="submit" onclick="hesapaç()" size="80"/>
+
+ <div ng-view></div>
+</div>
+
+
+<script type="application/javascript">
+
+
+ function hesapaç() {
+  var name=document.getElementById("name").value;
+var password=document.getElementById("password").value;
+  var db = new restdb("35e2376a2037d7e61f5fc2c6889adff448cb6");
+  var obj = new db.ana_sayfa();
+  obj.user=name;
+  obj.password=password;
+  obj.save();
+
+
+  alert("name:" + name + " password: " + password);
+ }
+
+</script>
+
+
+
+</body>
+</html>

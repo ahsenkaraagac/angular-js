@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" xmlns:float="http://www.w3.org/1999/xhtml">
+<p lang="en-US" xmlns:name="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="iletisim.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color: #8b0000;
+            }
+        </style>
+        <title>BİZE ULAŞIN</title>
+    </head>
+    <body>
+    <h1>BİZE ULAŞIN!!</h1>
+    <div style="width: 50%; float:left; text-align: center;" margin-right="1000">
+        <img src="http://www.tuntashotels.com/public/upload/content/images/contact_us.jpg" width="500" height="400">
+    </div>
+    <div style="width: 50%; float:right;">
+        <h2>5/24 Bize Ulaşın</h2>
+<p float="right;" size="200">Sizlere sunduğumuz hizmet, ürün veya servisler hakkındaki her türlü soru, görüş, öneri veya şikayetlerinizi aşağıdaki iletişim kanallarını kullanarak bize iletebilirsiniz.Yeni hesap açmak veya ofislerimizde görüşme randevusu almak içinde yine bu iletişim kanallarını kullanabilirsiniz.</p>
+<input id="Telefon:" type="tel" value="0 212 345 0 426">
+</div>
+<style>
+    h2{
+        text-align: center;
+        margin-left: 100px;
+
+    }
+</style>
+<ul class="tab">
+    <li><a href="#" class="tablinks" onclick="openMenu(event, 'Sıkça sorulan sorular')">Sıkça sorulan sorular</a></li>
+
+    <li><a href="#" class="tablinks" onclick="openMenu(event, 'İletişim adresimiz ')">İletişim adresimiz</a></li>
+</ul>
+
+<div id="Sıkça sorulan sorular" class="tabcontent">
+    <h3>Sıkça sorulan sorular</h3>
+    <p>1.)Genel müdürlüğünüz nerede?</p>
+    <p>cevap:Şirketimizin genel müdürlüğü İstanbul'dadır. 5'ten fazla irtibat ofisi ile yatırımcılarımıza hizmet veriyoruz.</p>
+    <p>2.)Ofisinizi ziyaret edebilir miyim?</p>
+    <p>cevap:Sizi ofislerimizde misafir etmekten mutluluk duyarız. Bunun için öncelikle randevu almanız gerekmektedir. Daha önceden hangi şehirdeki ofisimizi ziyaret edeceğinizi, tarih ve saati belirtirseniz, Kişisel Yatırım Temsilcinizin sizi karşılamasını dahi sağlayabiliriz. Şirketimizin genel müdürlüğü İstanbul'dadır. İrtibat ofislerimizin açık adresine "bize ulaşın" sayfamızdan ulaşabilirsiniz.</p>
+    <p>3.)Çalışma saatleriniz nelerdir</p>
+    <p>cevap:İşlemleriniz için hazine ve operasyon departmanlarımız 5 gün 24 saat hizmet vermektedir. Diğer tüm departmanlarımız ise hafta içi 5 gün; 09:00-18:30 saatleri arasında hizmet vermektedir.</p>
+    <p>4.)Forex'te hesap açmak ücretsiz midir?</p>
+    <p>Cevap:Evet, deneme hesabı veya gerçek hesap açmak tamamen ücretsizdir.  Forex, müşterilerinden "hesap açılış ücreti" veya "hesap işletim ücreti" adı altında herhangi kesinti yapmamaktadır.</p>
+    <p>5.)Forex'i telefonla arayıp işlem emri verebilir miyiz?</p>
+    <p>Cevap: Forex'i 6 gün (Pazar – Cuma) boyunca 08:00 – 24:00 saatleri arasında telefonla arayarak yatırım işlemlerinizi hazine departmanımız aracılığıyla gerçekleştirebilirsiniz. Açık olan pozisyonlarınızı kapatabilir, kar-al yada zarar-durdur seviyelerinizi belirleyebilirsiniz. İnternet bağlantınız kesildiğinde, bilgisayarınızla problem yaşadığınızda açık pozisyonlarınız yada kaçırdığınız fırsatlar için endişelenmeyin, hemen bizi 02123450426 numaralı telefondan arayın, memnuniyetle yardımcı olalım.</p>
+
+</div>
+
+<p id="İletişim adresimiz" class="tabcontent">
+<h3>İletişim adresimiz</h3>
+<p>Genel Müdürlük</p>
+<p>Adres:</p>
+<p>Eski Büyükdere Cad. Park Plaza Kat:14 Maslak - Sarıyer/İstanbul - TÜRKİYE</p>
+
+<p>Telefon:</p>
+<p>  0(212) 345 0 426 (GCM)</p>
+
+<p> Faks :</p>
+<p>+90 212 345 04 02</p>
+</div>
+<script>
+    function openMenu(evt, menuName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>
